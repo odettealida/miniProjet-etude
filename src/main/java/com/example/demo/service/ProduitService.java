@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
+import com.example.demo.Exception.ProduitNotFoundException;
 import com.example.demo.entity.Produit;
 import com.example.demo.repository.ProduitRepository;
 
@@ -19,7 +20,7 @@ public class ProduitService {
 		return this.produitRepository.findAll();
 		
 	}
-	public Optional<Produit> TrouverParId(Integer id){
+	public Optional <Produit> TrouverParId(Integer id){
 		return this.produitRepository.findById(id);
 	}
 	public Produit createProduit(Produit produit) {
